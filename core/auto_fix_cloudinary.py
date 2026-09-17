@@ -156,4 +156,9 @@ def auto_fix_cloudinary_urls():
     return total_fixed
 
 if __name__ == '__main__':
-    auto_fix_cloudinary_urls()
+    from django.db import OperationalError
+
+    try:
+        auto_fix_cloudinary_urls()
+    except OperationalError as exc:
+        print(f"Skipping Cloudinary URL cleanup because the database is unavailable: {exc}")
