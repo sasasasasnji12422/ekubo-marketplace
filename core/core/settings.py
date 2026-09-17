@@ -104,7 +104,7 @@ DATABASES = {
         'HOST': os.getenv('MYSQL_HOST') or os.getenv('MYSQLHOST', 'mysql.railway.internal'),
         'PORT': os.getenv('MYSQL_PORT') or os.getenv('MYSQLPORT', '3306'),
         'USER': os.getenv('MYSQL_USER') or os.getenv('MYSQLUSER', 'root'),
-        'PASSWORD': os.getenv('MYSQL_PASSWORD') or os.getenv('MYSQLPASSWORD', ''),
+        'PASSWORD': os.getenv('MYSQL_PASSWORD') or os.getenv('MYSQLPASSWORD', 'eyIcGxxXWuZkJjNJqRznKSeThUVBdvQD'),
         'OPTIONS': {
             'connect_timeout': int(os.getenv('MYSQL_CONNECT_TIMEOUT', '10')),
         },
